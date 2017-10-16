@@ -6,4 +6,4 @@ $User = "domain\administrator"
 $File = "\\freenas\freenas\password.txt"
 $MyCredential=New-Object -TypeName System.Management.Automation.PSCredential `
  -ArgumentList $User, (Get-Content $File | ConvertTo-SecureString)
- Invoke-Command -ComputerName itjuan -ScriptBlock {get-Service} -Credential $MyCredential
+ Invoke-Command -ComputerName name -ScriptBlock {get-Service} -Credential $MyCredential
