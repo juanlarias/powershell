@@ -2,7 +2,7 @@
 
 
 $pass = Get-Content "\\freenas\freenas\password.txt" | ConvertTo-SecureString
-$User = "camarketing\administrator"
+$User = "domain\administrator"
 $File = "\\freenas\freenas\password.txt"
 $MyCredential=New-Object -TypeName System.Management.Automation.PSCredential `
  -ArgumentList $User, (Get-Content $File | ConvertTo-SecureString)
