@@ -24,7 +24,7 @@
                 if ($verbose){
                 write-host "Connecting ($compname.name)" -BackgroundColor Green}
                 if (MytestConnection -ComputerName $compname.name){
-                        $obj=gwmi -ComputerName $compname.name Win32_ComputerSystem | Where-Object {$_.username -like "CAMARKETING\$username"} | select name,username
+                        $obj=gwmi -ComputerName $compname.name Win32_ComputerSystem | Where-Object {$_.username -like "domain\$username"} | select name,username
                         if ($obj){    
                             $prop.Computer=$obj.name
                             $prop.Username=$obj.username
