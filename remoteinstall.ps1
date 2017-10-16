@@ -1,7 +1,7 @@
 ﻿
-$server='itjuan'
-$OU="OU=Computers,OU=customer service,DC=CAMARKETING,DC=LOCAL"
-$sc="CUSTSERVJAZLING"
+$server='SERVERNAME'
+$OU="OU=Computers,OU=customer service,DC=DOMAIN,DC=LOCAL"
+$sc="COMPUTERNAME"
 $computers= get-ADcomputer -Filter * -SearchBase $OU | select name
 foreach($computer in $sc){
     Get-Service remoteregistry -ComputerName $computer | start-service
